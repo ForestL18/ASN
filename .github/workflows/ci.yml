@@ -1,7 +1,7 @@
 name: Update ASN and IP List
 
 on: 
-  push:
+  #push:
   workflow_dispatch:
   schedule:
     - cron: "0 16 * * *"
@@ -24,6 +24,7 @@ jobs:
         run: |
           python scripts/ChinaIP.py
           python scripts/ChinaASN.py
+          python scripts/GenericASN.py
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update IP List
