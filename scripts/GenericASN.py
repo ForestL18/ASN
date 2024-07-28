@@ -13,9 +13,10 @@ if not os.path.exists("GenericASN"):
 def initFile(keyword):
     localTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     with open(f"GenericASN/{keyword}-ASN.list", "w") as asnFile:
-        asnFile.write(f"// {keyword} ASN Information. (https://github.com/ForestL18/ASN) \n")
-        asnFile.write("// Last Updated: UTC " + localTime + "\n")
-        asnFile.write("// Made by Vincent, Modified by Forest, All rights reserved. " + "\n\n")
+        asnFile.write(f"# {keyword} ASN Information. (https://github.com/ForestL18/ASN) \n")
+        asnFile.write("# Last Updated: UTC " + localTime + "\n")
+        asnFile.write("# Made by Vincent, All rights reserved. " + "\n")
+        asnFile.write("# Mended by ForestL18, All rights reserved. " + "\n\n")
 
 def saveASN(keyword):
     url = f"https://bgp.he.net/search?search%5Bsearch%5D={keyword}&commit=Search"
