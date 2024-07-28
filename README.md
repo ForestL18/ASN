@@ -1,15 +1,15 @@
 <!--
  * @Author: Vincent Young
  * @Date: 2022-11-17 02:07:33
- * @LastEditors: Vincent Young
- * @LastEditTime: 2022-11-17 03:33:16
- * @FilePath: /ASN-China/README.md
+ * @LastEditors: ForestL18
+ * @LastEditTime: 2024-07-28 21:23:30
+ * @FilePath: /ASN/README.md
  * @Telegram: https://t.me/missuo
  * 
  * Copyright © 2022 by Vincent, All Rights Reserved. 
 -->
-# ASN-China
-ASN and IP list in China library.
+# ASN
+ASN and IP list.
 
 ## Features
 - Automatic daily updates
