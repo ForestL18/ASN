@@ -18,7 +18,7 @@ def initFile():
     with open("China-ASN.list", "w") as asnFile:
         asnFile.write("# ASN Information in China. (https://github.com/ForestL18/ASN) \n")
         asnFile.write("# Last Updated: UTC " + localTime + "\n")
-        asnFile.write("# Made by Vincent, All rights reserved. " + "\n\n")
+        asnFile.write("# Made by Vincent, All rights reserved. " + "\n")
         asnFile.write("# Mended by ForestL18, All rights reserved. " + "\n\n")
 
 def saveLatestASN():
