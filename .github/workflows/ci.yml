@@ -16,15 +16,23 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.8
+          
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests lxml
-      - name: Run Python
+          
+      - name: Run Python to Update IPASN List
         run: |
-          python scripts/ChinaIP.py
           python scripts/ChinaASN.py
           python scripts/GenericASN.py
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update IPASN List
+          
+      - name: Run Python to Update IP List
+        run: |
+          python scripts/ChinaIP.py
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update IP List
