@@ -6,14 +6,14 @@ import os
 # 自定义关键词列表
 keywords = ["Google", "Twitter", "Facebook", "Netflix", "Telegram"]
 
-# 创建 ASNs 文件夹
-if not os.path.exists("ASNs"):
-    os.makedirs("ASNs")
+# 创建 GenericASN 文件夹
+if not os.path.exists("GenericASN"):
+    os.makedirs("GenericASN")
 
 def initFile(keyword):
     localTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    with open(f"ASNs/{keyword}-ASN.list", "w") as asnFile:
-        asnFile.write(f"// {keyword} ASN Information. (https://github.com/ForestL18/ASNs) \n")
+    with open(f"GenericASN/{keyword}-ASN.list", "w") as asnFile:
+        asnFile.write(f"// {keyword} ASN Information. (https://github.com/ForestL18/ASN) \n")
         asnFile.write("// Last Updated: UTC " + localTime + "\n")
         asnFile.write("// Made by Vincent, Modified by Forest, All rights reserved. " + "\n\n")
 
@@ -31,7 +31,7 @@ def saveASN(keyword):
         asnDescription = asn.xpath('td[3]')[0].text
         if asnNumber and asnNumber.startswith("AS"):  # Check if asnNumber starts with "AS"
             asnInfo = "IP-ASN,{}".format(asnNumber.replace('AS', ''))
-            with open(f"ASNs/{keyword}-ASN.list", "a") as asnFile:
+            with open(f"GenericASN/{keyword}-ASN.list", "a") as asnFile:
                 asnFile.write(asnInfo)
                 asnFile.write("\n")
 
