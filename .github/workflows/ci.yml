@@ -1,4 +1,4 @@
-name: Update ASN and IP List
+name: Update IPASN List
 
 on: 
   #push:
@@ -26,10 +26,9 @@ jobs:
         run: |
           python scripts/ChinaASN.py
           python scripts/GenericASN.py
-          python scripts/ChinaIP.py
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update IPASN and IP List
+          commit_message: Update IPASN List
 
 
 
